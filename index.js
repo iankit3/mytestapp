@@ -4,6 +4,9 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 
+app.get("/api",function(req,res){ 
+   res.end("API END");
+})
 
 app.get('/', function(request, response) {
   response.end("END");
