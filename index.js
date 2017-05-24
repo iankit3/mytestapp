@@ -1,7 +1,7 @@
 var express = require('express');
-var connectionManager = require('./database/connectionManager');
+//var connectionManager = require('./database/connectionManager');
 //var bodyParser = require('body-parser');
-var connection = require('./database/connector');
+//var connection = require('./database/connector');
 
 //var path = require('path');
 var app = express();
