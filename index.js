@@ -1,11 +1,17 @@
 var express = require('express');
 var app = express();
+var connector = require("./database/connector");
+
 
 app.set('port', (process.env.PORT || 5000));
 
 
 app.get("/api",function(req,res){ 
-   res.end("API END");
+   connector.excuteQuery("SELECT * from users",function(err,rows){
+      var x =  JSON.stringify(rows) ;
+         res.end(x);
+
+   })
 })
 
 app.get('/', function(request, response) {
