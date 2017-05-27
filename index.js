@@ -1,9 +1,6 @@
 var express = require('express');
 var app = express();
-//var connector = require("./database/connector.js");
-
-var connector = require("./connector.js");
-
+var connector = require("./database/connector.js");
 
 app.set('port', (process.env.PORT || 5000));
 

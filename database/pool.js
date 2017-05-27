@@ -11,3 +11,7 @@ var pool = mysql.createPool({
 })
 
 module.exports = pool;
+
+// psql -h ec2-54-225-107-107.compute-1.amazonaws.com -U jfbhhzemjqtzjy dki5u7o4v56in
+//-----------------to get a psql terminal------------------------------
+//password - 420d03ef38cc3a97756c737d7839bcd1a6a26d017793bab834b79565bcb34fb3
