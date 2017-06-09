@@ -10,9 +10,10 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "express":"*",
-     "body-parser":"*",
-     "mysql":"*"
+    "body-parser": "*",
+    "express": "*",
+    "mysql": "*",
+    "twilio": "^3.3.0"
   },
   "license": "MIT"
 }
