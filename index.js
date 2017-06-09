@@ -1,8 +1,7 @@
 var express = require('express');
 var app = express();
 var connector = require("./database/connector.js");
-var twilio = require('twilio');
-
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -14,16 +13,12 @@ app.get("/api",function(req,res){
 })
 
 app.post("/welcome/sms/reply/",function(req,res){
+  const twiml = new MessagingResponse();
 
-  var twilio = require('twilio');
-      var twiml = new twilio.TwimlResponse();
-          twiml.message(function() {
-		        this.body('The Robots are coming! Head for the hills!');
-			      this.media('https://farm8.staticflickr.com/7090/6941316406_80b4d6d50e_z_d.jpg');
-			          });
-	      res.writeHead(200, {'Content-Type': 'text/xml'});
-	          res.end(twiml.toString());
+    twiml.message('The Robots are coming! Head for the hills!');
 
+      res.writeHead(200, {'Content-Type': 'text/xml'});
+        res.end(twiml.toString());
 })
 
 app.get('/', function(request, response) {
