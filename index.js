@@ -6,7 +6,7 @@ const connectionString = require('./constants').dburl;
 const pg = require('pg');
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
-app.set('port', process.env.PORT);
+app.set('port', (process.env.PORT || 5000) );
 var results = [];
 
 app.get("/api",function(req,res){ 
