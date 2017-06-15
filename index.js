@@ -7,7 +7,7 @@ const pg = require('pg');
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 app.set('port', process.env.PORT);
-
+var results = [];
 
 app.get("/api",function(req,res){ 
    /*connector.executeQuery("SELECT * from users",function(err,rows){
