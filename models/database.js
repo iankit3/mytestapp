@@ -20,5 +20,7 @@ function executeQuery(q,callback){
 }
 
 module.exports = {
-  executeQuery:executeQuery
+  db:{
+     executeQuery:executeQuery
+  }
 }
