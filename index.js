@@ -7,7 +7,10 @@ const connectionString = require('./constants').dburl;
 //const pg = require('pg');
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
-app.set('port', (process.env.PORT) );
+//app.set('port', (process.env.PORT || 5000) );
+
+var PORT = process.env.port || 5000;
+
 var results = [];
 
 app.get("/api",function(req,res){ 
@@ -30,8 +33,8 @@ app.get('/', function(request, response) {
   response.end("END");
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+app.listen(PORT, function() {
+  console.log('Node app is running on port', PORT);
 });
 
 
