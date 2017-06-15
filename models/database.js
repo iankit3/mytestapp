@@ -8,7 +8,7 @@ function executeQuery(q,callback){
          client.connect();
 
    const query = client.query(q);
-
+         console.log(query)
          query.on('row', (row) => {
              rows.push(row);
              callback(null, {rows: row});
