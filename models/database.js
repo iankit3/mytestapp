@@ -7,9 +7,8 @@ function executeQuery(q,callback){
    const client = new pg.Client(connectionString);
          client.connect();
 
-         console.log(q) 
    const query = client.query(q);
-         console.log(query)
+
          query.on('row', (row) => {
              rows.push(row);
              callback(null, {rows: row});
