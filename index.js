@@ -11,7 +11,10 @@ app.set('port', (process.env.PORT || 5000) );
 var results = [];
 
 app.get("/api",function(req,res){ 
-    
+    var q = "SELECT * from users";
+    db.executeQuery(q, (err,rows) => {
+       res.send(rows)
+    }) 	
 })
 
 app.post("/welcome/sms/reply/",function(req,res){
