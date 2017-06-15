@@ -9,7 +9,7 @@ const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 //app.set('port', (process.env.PORT || 5000) );
 
-var PORT = process.env.port || 5000;
+var PORT = process.env.PORT || 5000;
 
 var results = [];
 
