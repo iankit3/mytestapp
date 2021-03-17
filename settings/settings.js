@@ -1,5 +1,5 @@
 var consts = {
-   "password": "sf456"
+   "password": ""
 };
 
 module.exports = {
